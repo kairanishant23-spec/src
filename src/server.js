@@ -31,7 +31,7 @@ app.use(morgan("dev"));
 const corsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
-      process.env.FRONTEND_URL,
+      process.env.https:backend-cyan-mu-70.vercel.app,
       "http://localhost:3000",
       "http://localhost:5000",
       "http://localhost:5500",
