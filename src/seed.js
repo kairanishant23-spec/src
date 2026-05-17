@@ -255,20 +255,20 @@ const seedDatabase = async () => {
     console.log(`Seeded ${products.length} products`);
 
     // Create admin user if not exists
-    const adminExists = await User.findOne({ email: "admin@himsaru.com" });
+    const adminExists = await User.findOne({ email: "himsaru2025@gmail.com" });
     if (!adminExists) {
       const salt = await bcrypt.genSalt(10);
-      const hashedPassword = await bcrypt.hash("admin123", salt);
+      const hashedPassword = await bcrypt.hash("himsaru123", salt);
 
       await User.create({
         firstName: "HIMSARU",
-        lastName: "Admin",
-        email: "admin@himsaru.com",
+        lastName: "",
+        email: "himsaru2025@gmail.com",
         phone: "+91 7900474328",
-        password: hashedPassword,
+        password: Himsaru@123,
         role: "admin"
       });
-      console.log("Created admin user: admin@himsaru.com / admin123");
+      console.log("Created admin user: himsaru2025@gmail.com / himsaru123");
     }
 
     console.log("\n✅ Database seeded successfully!");
