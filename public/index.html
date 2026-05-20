@@ -2862,7 +2862,7 @@ const API_BASE = (() => {
     return 'http://localhost:10000/api';
   }
   // ⚠️ PRODUCTION: Replace 'himsaru-api' with your actual Render service name
-  return 'https://himsaru-api.onrender.com/api';
+  return 'https://himsaru-cipp.onrender.com';
 })();
 
 /* ── PRODUCT CATALOGUE ── */
@@ -3074,7 +3074,7 @@ async function api(ep, opts={}) {
       throw new Error('Request timed out. Please check your connection.');
     }
     if (e.message === 'Failed to fetch' || e.message.includes('NetworkError')) {
-      console.warn('⚠ Backend unreachable at:', API_BASE + ep);
+      console.warn('⚠  unreachable at:', API_BASE + ep);
       throw new Error('Cannot reach server. Please try again later.');
     }
     throw e;
@@ -3119,7 +3119,7 @@ async function loadProductsFromAPI() {
           })) : [{ size: p.unit || "500g", price: p.price, mrp: p.mrp || p.price, sku: `${p.name.replace(/\s+/g, '-').toUpperCase()}` }]
         });
       });
-      console.log("🌿 Loaded products dynamically from backend:", PRODUCTS.length);
+      console.log("🌿 Loaded products dynamically from :", PRODUCTS.length);
     }
   } catch (err) {
     console.error("Error loading products from backend API, using local fallback:", err);
