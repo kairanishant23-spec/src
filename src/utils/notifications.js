@@ -2,7 +2,7 @@
 console.log("📧 [Notifications] SMTP_HOST :", process.env.SMTP_HOST || "❌ NOT SET");
 console.log("📧 [Notifications] SMTP_USER :", process.env.SMTP_USER || "❌ NOT SET");
 console.log("📧 [Notifications] SMTP_PASS :", process.env.SMTP_PASS ? `✅ SET (${process.env.SMTP_PASS.length} chars)` : "❌ NOT SET");
-console.log("📱 [Notifications] SMS_API_KEY:", process.env.SMS_API_KEY && process.env.SMS_API_KEY !== "MtwLpgJCqsfBF9muk1NPOS3nQVeDoXl62HYaRWcr4dGi8x5AjvdYUQkfNB4HPiqFtM9voWK2R73y5SrX" ? `✅ SET (${process.env.SMS_API_KEY.length} chars)` : "❌ NOT SET / placeholder");
+console.log("📱 [Notifications] SMS_API_KEY :", process.env.SMS_API_KEY && process.env.SMS_API_KEY !== "MtwLpgJCqsfBF9muk1NPOS3nQVeDoXl62HYaRWcr4dGi8x5AjvdYUQkfNB4HPiqFtM9voWK2R73y5SrX" ? `✅ SET (${process.env.SMS_API_KEY.length} chars)` : "❌ NOT SET / placeholder");
 
 let nodemailer;
 try {
